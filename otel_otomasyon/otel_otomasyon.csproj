@@ -44,67 +44,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="2kisiliodalar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="2kisiliodalar.Designer.cs">
-      <DependentUpon>2kisiliodalar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="3kisilikodalar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="3kisilikodalar.Designer.cs">
-      <DependentUpon>3kisilikodalar.cs</DependentUpon>
-    </Compile>
     <Compile Include="anaform.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="anaform.Designer.cs">
       <DependentUpon>anaform.cs</DependentUpon>
     </Compile>
-    <Compile Include="arama.cs">
+    <Compile Include="musteriislemleri\arama.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="arama.Designer.cs">
+    <Compile Include="musteriislemleri\arama.Designer.cs">
       <DependentUpon>arama.cs</DependentUpon>
     </Compile>
-    <Compile Include="bosalacakodalar.cs">
+    <Compile Include="oda\bosodalar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bosalacakodalar.Designer.cs">
-      <DependentUpon>bosalacakodalar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="bosodalar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="bosodalar.Designer.cs">
+    <Compile Include="oda\bosodalar.Designer.cs">
       <DependentUpon>bosodalar.cs</DependentUpon>
     </Compile>
-    <Compile Include="doluodalar.cs">
+    <Compile Include="oda\doluodalar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="doluodalar.Designer.cs">
+    <Compile Include="oda\doluodalar.Designer.cs">
       <DependentUpon>doluodalar.cs</DependentUpon>
     </Compile>
-    <Compile Include="mevcutmusteri.cs">
+    <Compile Include="kullanicigirisi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mevcutmusteri.Designer.cs">
+    <Compile Include="kullanicigirisi.Designer.cs">
+      <DependentUpon>kullanicigirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musteriislemleri\mevcutmusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteriislemleri\mevcutmusteri.Designer.cs">
       <DependentUpon>mevcutmusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oda\odaislemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oda\odaislemleri.Designer.cs">
+      <DependentUpon>odaislemleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="yenimusteri.cs">
+    <Compile Include="musteriislemleri\yenimusteri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="yenimusteri.Designer.cs">
+    <Compile Include="musteriislemleri\yenimusteri.Designer.cs">
       <DependentUpon>yenimusteri.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="anaform.resx">
       <DependentUpon>anaform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bosalacakodalar.resx">
-      <DependentUpon>bosalacakodalar.cs</DependentUpon>
+    <EmbeddedResource Include="musteriislemleri\arama.resx">
+      <DependentUpon>arama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oda\bosodalar.resx">
+      <DependentUpon>bosodalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oda\doluodalar.resx">
+      <DependentUpon>doluodalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanicigirisi.resx">
+      <DependentUpon>kullanicigirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musteriislemleri\mevcutmusteri.resx">
+      <DependentUpon>mevcutmusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oda\odaislemleri.resx">
+      <DependentUpon>odaislemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,6 +124,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="musteriislemleri\yenimusteri.resx">
+      <DependentUpon>yenimusteri.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

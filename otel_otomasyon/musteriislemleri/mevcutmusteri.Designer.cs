@@ -1,6 +1,6 @@
 ﻿namespace otel_otomasyon
 {
-    partial class arama
+    partial class mevcutmusteri
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // mevcutmusteri
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "arama";
+            this.ClientSize = new System.Drawing.Size(734, 261);
+            this.Name = "mevcutmusteri";
+            this.Text = "mevcutmusteri";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

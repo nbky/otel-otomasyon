@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace otel_otomasyon
 {
-    public partial class _2kisiliodalar : Form
+    public partial class odaislemleri : Form
     {
-        public _2kisiliodalar()
+        public odaislemleri()
         {
             InitializeComponent();
         }
