@@ -9,12 +9,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace otel_otomasyon
-{
+{ 
+  
     public partial class odaislemleri : Form
     {
+
+        yenimusteri yenimusteriler;
         public odaislemleri()
         {
             InitializeComponent();
         }
+        void bosodayenimusterikaydi()// bos ise yeni musteri kaydı acılacak odaya tıklayınca
+        {
+            yenimusteriler = new yenimusteri();
+            yenimusteriler.Show();
+            yenimusteriler.Focus();
+                     
+        }
+        void doluodamusteribilgileri()//dolu odaysa buradan tıklayınca musterılerın bılgılerı gelecek
+        {
+
+        }
+        void dolumubosmu()//bosluk doluluk kontrolu yapacam
+        {
+            
+        }
+         private void bosbuton201_Click(object sender, EventArgs e)
+         {
+             bosodayenimusterikaydi();
+         }
+
+        
+        
     }
 }
