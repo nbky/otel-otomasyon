@@ -14,9 +14,10 @@ namespace otel_otomasyon
     {
         yenimusteri yenimusteri; 
         mevcutmusteri mevcutmusteri;
-        arama musteriarama;
+        aramaislmleriformu musteriarama;
         kullanicigirisi giris;
         odaislemleri odalar;
+        odalaryeni yeniodalar;
      /* AÇIKLAMALAR-1: Metotların üzerinde ki açıklama numarasına göre nerede ne yapılmış daha kolay çözebilirsiniz.
             * Burada İstenilen form açılıyor ayrıca bir kaç ekleme yaptık.
             * Açılan form sadece Konteynırın içinde açıla bilmesi için MdiParent ı kullandık şartı sağlıyorsa formu açıyor.
@@ -57,7 +58,7 @@ namespace otel_otomasyon
 
             if (musteriarama == null || musteriarama.IsDisposed)
             {
-                musteriarama = new arama();
+                musteriarama = new aramaislmleriformu();
                 musteriarama.MdiParent = this;
                 musteriarama.Show();
             }
@@ -125,6 +126,13 @@ namespace otel_otomasyon
                         odalar.Focus();
                     }
                 }
+
+              /*  private void odalaryeniToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    yeniodalar = new odalaryeni();
+                    yeniodalar.Show();
+                    yeniodalar.MdiParent = this;
+                }*/
              
         }
              

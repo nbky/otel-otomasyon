@@ -15,6 +15,7 @@ namespace otel_otomasyon
     {
 
         yenimusteri yenimusteriler;
+        mevcutmusteri musteribilgileri;
         public odaislemleri()
         {
             InitializeComponent();
@@ -28,7 +29,9 @@ namespace otel_otomasyon
         }
         void doluodamusteribilgileri()//dolu odaysa buradan tıklayınca musterılerın bılgılerı gelecek
         {
-
+            musteribilgileri = new mevcutmusteri();
+            musteribilgileri.Show();
+            musteribilgileri.Focus();
         }
         void dolumubosmu()//bosluk doluluk kontrolu yapacam
         {

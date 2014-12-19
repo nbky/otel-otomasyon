@@ -36,6 +36,7 @@
             this.müşteriAramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odalaryeniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuler.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,8 @@
             this.menuler.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.müşteriToolStripMenuItem,
             this.odalarToolStripMenuItem,
-            this.çıkışToolStripMenuItem});
+            this.çıkışToolStripMenuItem,
+            this.odalaryeniToolStripMenuItem});
             this.menuler.Location = new System.Drawing.Point(0, 0);
             this.menuler.Name = "menuler";
             this.menuler.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -57,6 +59,7 @@
             // 
             // müşteriToolStripMenuItem
             // 
+            this.müşteriToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.müşteriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.yeniMüşteriGirişiToolStripMenuItem,
             this.mevcutOlanMüşterilerToolStripMenuItem,
@@ -65,19 +68,22 @@
             this.müşteriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("müşteriToolStripMenuItem.Image")));
             this.müşteriToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.müşteriToolStripMenuItem.Name = "müşteriToolStripMenuItem";
-            this.müşteriToolStripMenuItem.Size = new System.Drawing.Size(116, 36);
+            this.müşteriToolStripMenuItem.Size = new System.Drawing.Size(124, 36);
             this.müşteriToolStripMenuItem.Text = "Müşteri İşlemleri";
             // 
             // yeniMüşteriGirişiToolStripMenuItem
             // 
+            this.yeniMüşteriGirişiToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.yeniMüşteriGirişiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yeniMüşteriGirişiToolStripMenuItem.Image")));
             this.yeniMüşteriGirişiToolStripMenuItem.Name = "yeniMüşteriGirişiToolStripMenuItem";
             this.yeniMüşteriGirişiToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.yeniMüşteriGirişiToolStripMenuItem.Text = "Yeni Müşteri Girişi";
+            this.yeniMüşteriGirişiToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.yeniMüşteriGirişiToolStripMenuItem.Click += new System.EventHandler(this.yeniMüşteriGirişiToolStripMenuItem_Click);
             // 
             // mevcutOlanMüşterilerToolStripMenuItem
             // 
+            this.mevcutOlanMüşterilerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.mevcutOlanMüşterilerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mevcutOlanMüşterilerToolStripMenuItem.Image")));
             this.mevcutOlanMüşterilerToolStripMenuItem.Name = "mevcutOlanMüşterilerToolStripMenuItem";
             this.mevcutOlanMüşterilerToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
@@ -86,6 +92,7 @@
             // 
             // müşteriAramaToolStripMenuItem
             // 
+            this.müşteriAramaToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.müşteriAramaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("müşteriAramaToolStripMenuItem.Image")));
             this.müşteriAramaToolStripMenuItem.Name = "müşteriAramaToolStripMenuItem";
             this.müşteriAramaToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
@@ -94,19 +101,29 @@
             // 
             // odalarToolStripMenuItem
             // 
+            this.odalarToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.odalarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("odalarToolStripMenuItem.Image")));
             this.odalarToolStripMenuItem.Name = "odalarToolStripMenuItem";
-            this.odalarToolStripMenuItem.Size = new System.Drawing.Size(116, 36);
+            this.odalarToolStripMenuItem.Size = new System.Drawing.Size(104, 36);
             this.odalarToolStripMenuItem.Text = "Oda İşlemleri";
             this.odalarToolStripMenuItem.Click += new System.EventHandler(this.odalarToolStripMenuItem_Click);
             // 
             // çıkışToolStripMenuItem
             // 
+            this.çıkışToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.çıkışToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("çıkışToolStripMenuItem.Image")));
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(116, 36);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(95, 36);
             this.çıkışToolStripMenuItem.Text = "Çıkış İşlemi";
             this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
+            // 
+            // odalaryeniToolStripMenuItem
+            // 
+          /*  this.odalaryeniToolStripMenuItem.Name = "odalaryeniToolStripMenuItem";
+            this.odalaryeniToolStripMenuItem.Size = new System.Drawing.Size(75, 36);
+            this.odalaryeniToolStripMenuItem.Text = "odalaryeni";
+          //  this.odalaryeniToolStripMenuItem.Click += new System.EventHandler(this.odalaryeniToolStripMenuItem_Click);
+            */ 
             // 
             // anasayfa
             // 
@@ -143,6 +160,7 @@
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mevcutOlanMüşterilerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem müşteriAramaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem odalaryeniToolStripMenuItem;
     }
 }
 

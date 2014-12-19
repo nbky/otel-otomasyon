@@ -56,17 +56,23 @@
     <Compile Include="musteriislemleri\arama.Designer.cs">
       <DependentUpon>arama.cs</DependentUpon>
     </Compile>
+    <Compile Include="oda\odalaryeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oda\odalaryeni.Designer.cs">
+      <DependentUpon>odalaryeni.cs</DependentUpon>
+    </Compile>
     <Compile Include="oda\bosodalar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="oda\bosodalar.Designer.cs">
       <DependentUpon>bosodalar.cs</DependentUpon>
     </Compile>
-    <Compile Include="oda\doluodalar.cs">
+    <Compile Include="oda\musteribilgiformu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="oda\doluodalar.Designer.cs">
-      <DependentUpon>doluodalar.cs</DependentUpon>
+    <Compile Include="oda\musteribilgiformu.Designer.cs">
+      <DependentUpon>musteribilgiformu.cs</DependentUpon>
     </Compile>
     <Compile Include="kullanicigirisi.cs">
       <SubType>Form</SubType>
@@ -100,11 +106,14 @@
     <EmbeddedResource Include="musteriislemleri\arama.resx">
       <DependentUpon>arama.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="oda\odalaryeni.resx">
+      <DependentUpon>odalaryeni.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="oda\bosodalar.resx">
       <DependentUpon>bosodalar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="oda\doluodalar.resx">
-      <DependentUpon>doluodalar.cs</DependentUpon>
+    <EmbeddedResource Include="oda\musteribilgiformu.resx">
+      <DependentUpon>musteribilgiformu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kullanicigirisi.resx">
       <DependentUpon>kullanicigirisi.cs</DependentUpon>

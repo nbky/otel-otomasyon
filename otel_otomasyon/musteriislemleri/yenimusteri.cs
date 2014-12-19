@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient; //Baglanti için gerekli namespace
 
 namespace otel_otomasyon
 {
@@ -15,6 +16,17 @@ namespace otel_otomasyon
         public yenimusteri()
         {
             InitializeComponent();
+        }
+
+        private void yenimusteri_Load(object sender, EventArgs e)
+        {
+          //  this.LayoutMdi(MdiLayout.Cascade);
+
+        }
+        public void yenimusterikaydi()
+        {
+           
+
         }
     }
 }

@@ -34,6 +34,7 @@ C:\Users\Administrator\Desktop\otel-otomasyon\otel_otomasyon\obj\Debug\otel_otom
 C:\Users\Administrator\Desktop\otel-otomasyon\otel_otomasyon\obj\Debug\otel_otomasyon.bosodalar.resources
 C:\Users\Administrator\Desktop\otel-otomasyon\otel_otomasyon\obj\Debug\otel_otomasyon.doluodalar.resources
 C:\Users\Administrator\Desktop\otel-otomasyon\otel_otomasyon\obj\Debug\otel_otomasyon.mevcutmusteri.resources
-C:\Users\Administrator\Desktop\otel-otomasyon\otel_otomasyon\obj\Debug\otel_otomasyon.arama.resources
 C:\Users\Administrator\Desktop\otel-otomasyon\otel_otomasyon\obj\Debug\otel_otomasyon.kullanicigirisi.resources
 C:\Users\Administrator\Desktop\otel-otomasyon\otel_otomasyon\obj\Debug\otel_otomasyon.odaislemleri.resources
+C:\Users\Administrator\Desktop\otel-otomasyon\otel_otomasyon\obj\Debug\otel_otomasyon.aramaislmleriformu.resources
+C:\Users\Administrator\Desktop\otel-otomasyon\otel_otomasyon\obj\Debug\otel_otomasyon.odalaryeni.resources
