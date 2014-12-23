@@ -50,6 +50,7 @@
     <Compile Include="anaform.Designer.cs">
       <DependentUpon>anaform.cs</DependentUpon>
     </Compile>
+    <Compile Include="baglantiayarlari.cs" />
     <Compile Include="musteriislemleri\arama.cs">
       <SubType>Form</SubType>
     </Compile>

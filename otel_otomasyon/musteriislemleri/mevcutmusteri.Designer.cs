@@ -35,8 +35,6 @@
             this.giristarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cikistarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.odano = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.medenihal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cinsiyet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.telefonno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.musteribilgiarama = new System.Windows.Forms.Button();
             this.musteribilgiyazdir = new System.Windows.Forms.Button();
@@ -50,8 +48,6 @@
             this.giristarih,
             this.cikistarihi,
             this.odano,
-            this.medenihal,
-            this.cinsiyet,
             this.telefonno});
             this.musteribilgiformu.Location = new System.Drawing.Point(12, 25);
             this.musteribilgiformu.Name = "musteribilgiformu";
@@ -83,16 +79,6 @@
             // 
             this.odano.Text = "Oda Numarası";
             this.odano.Width = 50;
-            // 
-            // medenihal
-            // 
-            this.medenihal.Text = "Medeni Hali";
-            this.medenihal.Width = 75;
-            // 
-            // cinsiyet
-            // 
-            this.cinsiyet.Text = "Cinsiyeti";
-            this.cinsiyet.Width = 75;
             // 
             // telefonno
             // 
@@ -146,8 +132,6 @@
         private System.Windows.Forms.ColumnHeader giristarih;
         private System.Windows.Forms.ColumnHeader cikistarihi;
         private System.Windows.Forms.ColumnHeader odano;
-        private System.Windows.Forms.ColumnHeader medenihal;
-        private System.Windows.Forms.ColumnHeader cinsiyet;
         private System.Windows.Forms.ColumnHeader telefonno;
         private System.Windows.Forms.Button musteribilgiarama;
         private System.Windows.Forms.Button musteribilgiyazdir;

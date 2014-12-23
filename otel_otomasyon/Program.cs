@@ -16,7 +16,7 @@ namespace otel_otomasyon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new anasayfa());
+            Application.Run(new kullanicigirisi());
         }
     }
 }

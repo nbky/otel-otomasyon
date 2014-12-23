@@ -12,10 +12,11 @@ namespace otel_otomasyon
 
 {
     
+    
     public partial class kullanicigirisi : Form
     {
-      //  kullanicigirisi giris;
-       // anasayfa asilsayfa;
+        anasayfa anaform;
+     
         public kullanicigirisi()
         {
             InitializeComponent();
@@ -23,9 +24,15 @@ namespace otel_otomasyon
 
         private void girisbutonu_Click(object sender, EventArgs e)
         {
-           // giris = new kullanicigirisi();
-            //asilsayfa = new anasayfa();
-           //giris.Enabled = false;
+            kullanicigirisi giris = new kullanicigirisi();
+            giris.Close();
+           
+            anaform = new anasayfa(); 
+            anaform.Show();
+            anaform.Focus();
+            this.Hide();
+            
+     
         }
     }
 }

@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AADvrgAE46ABj8d9Au7DeAL2w3gC9sN4AvbDeAL2w3gC9sN4AvbDeAL2w3gC9sN4AvbDeAL2xXoC8t2Y
+        AazwrwAR66kCb7BhAP+oVwD/qFcA/6hXAP+oVwD/qFcA/6hXAP+oVwD/qFcA/6hXAP+oVwD/qFcA/6hX
+        AP+qWQD/4JwCodmWCbKsXAD/rF0A/6xdAP+sXQD/rF0A/6xdAP+sXQD/rF0A/6xdAP+sXQD/rF0A/6xd
+        AP+sXQD/rF0A/8+JDuHZlgu306Z4/7VsFP+xYwD/sWMA/7FjAP+xYwD/sWMA/7FjAP+xYwD/sWMA/7Fj
+        AP+xYwD/v380/8mTVf/Qiw/k2pYLt/br4//y5Nb/2LCC/9eufv/Xrn7/165+/9eufv/Xrn7/165+/9eu
+        fv/Xrn7/3LaN//nz7f/jxaD/0o4P5NyZC7f27OP/////////////////////////////////////////
+        ////////////////////////5ceg/9WSD+Tdmwu39+3j/+zWuf/iv5P/4r+T/+K/k//iv5P/4r+T/+K/
+        k//iv5P/4r+T/+K/k//iv5P/4r+T/9SiXf/XlA/k354Lt/ju4//brmr/9+zd//fs3P/37Nz/9+zc//fs
+        3P/37Nz/9+zc//fs3P/37Nz/9+zc//fs3P/059P/25sa5OGgC7f47+P/3a9i/+XBj//lwY//26tf/9CS
+        KP/Qkij/0JIo/9CSKP/Qkij/0JIo/9mmU//Qkij/z48h/9yaD+Tjogu3+fDj/+G1Yv/z4cL/6sqP/9GO
+        EP/OiAD/zogA/86IAP/OiAD/zogA/86GAP/lv3b/zocA/86IAP/fng/k5qULt+3QmP/cpDL/040A/9SO
+        AP/UjgD/1I4A/9SOAP/UjgD/1I4A/9mcIf/47dP//Pft//jt0//ZnCD/4qEP5OioC7fYkwD/2ZQA/9mU
+        AP/ZlAD/2ZQA/9mUAP/ZlAD/2ZQA/9mUAP/ZlAD/8NOX///////v0ZT/2ZQA/+WkD+Tqqgu33poA/96a
+        AP/emgD/3poA/96aAP/emgD/3poA/96aAP/emgD/3poA/9+dCf/jpiD/350I/96aAP/npw/k7KwGpOSg
+        AP/koQD/5KEA/+ShAP/koQD/5KEA/+ShAP/koQD/5KEA/+ShAP/koQD/5KEA/+ShAP/koQD/6qoK1e+u
+        ADnrqQD46acA/+mnAP/ppwD/6acA/+mnAP/ppwD/6acA/+mnAP/ppwD/6acA/+mnAP/ppwD/6qgA/+6t
+        AGQAAAAA764AMe+vBJnvrwet768Hre+vB63vrwet768Hre+vB63vrwet768Hre+vB63vrwet768Fo++u
+        AEkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAgAEAAA==
+</value>
+  </data>
 </root>

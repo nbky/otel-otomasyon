@@ -15,9 +15,9 @@ namespace otel_otomasyon
         yenimusteri yenimusteri; 
         mevcutmusteri mevcutmusteri;
         aramaislmleriformu musteriarama;
-        kullanicigirisi giris;
+     
         odaislemleri odalar;
-        odalaryeni yeniodalar;
+       
      /* AÇIKLAMALAR-1: Metotların üzerinde ki açıklama numarasına göre nerede ne yapılmış daha kolay çözebilirsiniz.
             * Burada İstenilen form açılıyor ayrıca bir kaç ekleme yaptık.
             * Açılan form sadece Konteynırın içinde açıla bilmesi için MdiParent ı kullandık şartı sağlıyorsa formu açıyor.
@@ -105,10 +105,7 @@ namespace otel_otomasyon
                 private void anasayfa_Load(object sender, EventArgs e)
         {
            
-            giris = new kullanicigirisi();
-       //     giris.Show();
-          //  giris.Focus();
-         //   giris.MdiParent = this;
+                 
 
                  
                 }
