@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aramaislmleriformu));
             this.musteribilgileri = new System.Windows.Forms.ListView();
+            this.tcno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.adsoyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.giristarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cikistarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.telefon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.hizliarama = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,11 +42,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tcno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.adsoyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.giristarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cikistarihi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.telefon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,30 @@
             this.musteribilgileri.Size = new System.Drawing.Size(960, 375);
             this.musteribilgileri.TabIndex = 0;
             this.musteribilgileri.UseCompatibleStateImageBehavior = false;
+            // 
+            // tcno
+            // 
+            this.tcno.Text = "T.C. Kimlik Numarası";
+            this.tcno.Width = 100;
+            // 
+            // adsoyad
+            // 
+            this.adsoyad.Text = "Adı Soyadı";
+            this.adsoyad.Width = 100;
+            // 
+            // giristarih
+            // 
+            this.giristarih.Text = "Giriş Tarihi";
+            // 
+            // cikistarihi
+            // 
+            this.cikistarihi.Text = "Çıkış Tarihi";
+            this.cikistarihi.Width = 100;
+            // 
+            // telefon
+            // 
+            this.telefon.Text = "Telefon Numarası";
+            this.telefon.Width = 100;
             // 
             // groupBox1
             // 
@@ -128,40 +152,19 @@
             this.comboBox1.TabIndex = 6;
             this.comboBox1.Text = "Kategori Seçiniz";
             // 
-            // tcno
-            // 
-            this.tcno.Text = "T.C. Kimlik Numarası";
-            this.tcno.Width = 100;
-            // 
-            // adsoyad
-            // 
-            this.adsoyad.Text = "Adı Soyadı";
-            this.adsoyad.Width = 100;
-            // 
-            // giristarih
-            // 
-            this.giristarih.Text = "Giriş Tarihi";
-            // 
-            // cikistarihi
-            // 
-            this.cikistarihi.Text = "Çıkış Tarihi";
-            this.cikistarihi.Width = 100;
-            // 
-            // telefon
-            // 
-            this.telefon.Text = "Telefon Numarası";
-            this.telefon.Width = 100;
-            // 
             // aramaislmleriformu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(984, 497);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.musteribilgileri);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "aramaislmleriformu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arama İşlemleri";

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(yenimusteri));
             this.msuterikayitpanel = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.soyadkutu = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.kacaksurekutu = new System.Windows.Forms.TextBox();
@@ -45,13 +47,11 @@
             this.medenihal = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.kayittarihikutu = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.telefonnokutu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.adsoyadkutu = new System.Windows.Forms.TextBox();
+            this.adkutu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tckimliknokutu = new System.Windows.Forms.TextBox();
@@ -60,6 +60,8 @@
             // 
             // msuterikayitpanel
             // 
+            this.msuterikayitpanel.Controls.Add(this.label13);
+            this.msuterikayitpanel.Controls.Add(this.soyadkutu);
             this.msuterikayitpanel.Controls.Add(this.button2);
             this.msuterikayitpanel.Controls.Add(this.button1);
             this.msuterikayitpanel.Controls.Add(this.kacaksurekutu);
@@ -75,13 +77,11 @@
             this.msuterikayitpanel.Controls.Add(this.medenihal);
             this.msuterikayitpanel.Controls.Add(this.label9);
             this.msuterikayitpanel.Controls.Add(this.label8);
-            this.msuterikayitpanel.Controls.Add(this.label7);
-            this.msuterikayitpanel.Controls.Add(this.kayittarihikutu);
             this.msuterikayitpanel.Controls.Add(this.label5);
             this.msuterikayitpanel.Controls.Add(this.label44);
             this.msuterikayitpanel.Controls.Add(this.telefonnokutu);
             this.msuterikayitpanel.Controls.Add(this.label3);
-            this.msuterikayitpanel.Controls.Add(this.adsoyadkutu);
+            this.msuterikayitpanel.Controls.Add(this.adkutu);
             this.msuterikayitpanel.Controls.Add(this.label2);
             this.msuterikayitpanel.Controls.Add(this.label1);
             this.msuterikayitpanel.Controls.Add(this.tckimliknokutu);
@@ -90,13 +90,31 @@
             this.msuterikayitpanel.Size = new System.Drawing.Size(960, 471);
             this.msuterikayitpanel.TabIndex = 0;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Location = new System.Drawing.Point(48, 216);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 15);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Soyad :";
+            // 
+            // soyadkutu
+            // 
+            this.soyadkutu.Location = new System.Drawing.Point(178, 215);
+            this.soyadkutu.Name = "soyadkutu";
+            this.soyadkutu.Size = new System.Drawing.Size(182, 20);
+            this.soyadkutu.TabIndex = 3;
+            // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(750, 319);
+            this.button2.Location = new System.Drawing.Point(746, 328);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(101, 41);
-            this.button2.TabIndex = 29;
+            this.button2.TabIndex = 13;
             this.button2.Text = "Temizle";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -105,10 +123,10 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(640, 319);
+            this.button1.Location = new System.Drawing.Point(636, 328);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 41);
-            this.button1.TabIndex = 28;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Kayıt";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -117,7 +135,7 @@
             this.kacaksurekutu.Location = new System.Drawing.Point(683, 219);
             this.kacaksurekutu.Name = "kacaksurekutu";
             this.kacaksurekutu.Size = new System.Drawing.Size(182, 20);
-            this.kacaksurekutu.TabIndex = 27;
+            this.kacaksurekutu.TabIndex = 10;
             // 
             // label12
             // 
@@ -146,7 +164,7 @@
             this.cikistarihikutu.Location = new System.Drawing.Point(683, 263);
             this.cikistarihikutu.Name = "cikistarihikutu";
             this.cikistarihikutu.Size = new System.Drawing.Size(182, 20);
-            this.cikistarihikutu.TabIndex = 23;
+            this.cikistarihikutu.TabIndex = 11;
             // 
             // label6
             // 
@@ -164,7 +182,7 @@
             this.giristarihikutu.Location = new System.Drawing.Point(683, 177);
             this.giristarihikutu.Name = "giristarihikutu";
             this.giristarihikutu.Size = new System.Drawing.Size(182, 20);
-            this.giristarihikutu.TabIndex = 21;
+            this.giristarihikutu.TabIndex = 9;
             // 
             // cinsiyetkutu
             // 
@@ -172,17 +190,17 @@
             this.cinsiyetkutu.Items.AddRange(new object[] {
             "Bay",
             "Bayan"});
-            this.cinsiyetkutu.Location = new System.Drawing.Point(178, 341);
+            this.cinsiyetkutu.Location = new System.Drawing.Point(178, 337);
             this.cinsiyetkutu.Name = "cinsiyetkutu";
             this.cinsiyetkutu.Size = new System.Drawing.Size(182, 22);
-            this.cinsiyetkutu.TabIndex = 20;
+            this.cinsiyetkutu.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(48, 344);
+            this.label4.Location = new System.Drawing.Point(48, 340);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 15);
             this.label4.TabIndex = 19;
@@ -225,7 +243,7 @@
             this.odanokutu.Location = new System.Drawing.Point(683, 135);
             this.odanokutu.Name = "odanokutu";
             this.odanokutu.Size = new System.Drawing.Size(182, 22);
-            this.odanokutu.TabIndex = 18;
+            this.odanokutu.TabIndex = 8;
             // 
             // label10
             // 
@@ -245,17 +263,17 @@
             "Evli",
             "Bekar",
             "Dul"});
-            this.medenihal.Location = new System.Drawing.Point(178, 263);
+            this.medenihal.Location = new System.Drawing.Point(178, 296);
             this.medenihal.Name = "medenihal";
             this.medenihal.Size = new System.Drawing.Size(182, 22);
-            this.medenihal.TabIndex = 16;
+            this.medenihal.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(48, 265);
+            this.label9.Location = new System.Drawing.Point(48, 298);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 15);
             this.label9.TabIndex = 15;
@@ -272,24 +290,6 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Oda Bilgileri";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(48, 305);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 15);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Kayıt Tarihi :";
-            // 
-            // kayittarihikutu
-            // 
-            this.kayittarihikutu.Location = new System.Drawing.Point(178, 304);
-            this.kayittarihikutu.Name = "kayittarihikutu";
-            this.kayittarihikutu.Size = new System.Drawing.Size(182, 20);
-            this.kayittarihikutu.TabIndex = 11;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -305,7 +305,7 @@
             this.label44.AutoSize = true;
             this.label44.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label44.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label44.Location = new System.Drawing.Point(48, 221);
+            this.label44.Location = new System.Drawing.Point(48, 254);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(101, 15);
             this.label44.TabIndex = 6;
@@ -313,11 +313,11 @@
             // 
             // telefonnokutu
             // 
-            this.telefonnokutu.Location = new System.Drawing.Point(178, 220);
+            this.telefonnokutu.Location = new System.Drawing.Point(178, 253);
             this.telefonnokutu.MaxLength = 10;
             this.telefonnokutu.Name = "telefonnokutu";
             this.telefonnokutu.Size = new System.Drawing.Size(182, 20);
-            this.telefonnokutu.TabIndex = 5;
+            this.telefonnokutu.TabIndex = 4;
             // 
             // label3
             // 
@@ -326,16 +326,16 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(48, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.Size = new System.Drawing.Size(31, 15);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Adı Soyadı :";
+            this.label3.Text = "Adı :";
             // 
-            // adsoyadkutu
+            // adkutu
             // 
-            this.adsoyadkutu.Location = new System.Drawing.Point(178, 176);
-            this.adsoyadkutu.Name = "adsoyadkutu";
-            this.adsoyadkutu.Size = new System.Drawing.Size(182, 20);
-            this.adsoyadkutu.TabIndex = 3;
+            this.adkutu.Location = new System.Drawing.Point(178, 176);
+            this.adkutu.Name = "adkutu";
+            this.adkutu.Size = new System.Drawing.Size(182, 20);
+            this.adkutu.TabIndex = 2;
             // 
             // label2
             // 
@@ -372,11 +372,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(984, 496);
             this.Controls.Add(this.msuterikayitpanel);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "yenimusteri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeni Müşteri Kaydı";
@@ -395,13 +397,11 @@
         private System.Windows.Forms.ComboBox medenihal;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker kayittarihikutu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox telefonnokutu;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox adsoyadkutu;
+        private System.Windows.Forms.TextBox adkutu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tckimliknokutu;
@@ -415,6 +415,8 @@
         private System.Windows.Forms.TextBox kacaksurekutu;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox soyadkutu;
 
     }
 }

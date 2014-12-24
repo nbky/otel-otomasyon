@@ -119,11 +119,8 @@
             // 
             // odalaryeniToolStripMenuItem
             // 
-          /*  this.odalaryeniToolStripMenuItem.Name = "odalaryeniToolStripMenuItem";
-            this.odalaryeniToolStripMenuItem.Size = new System.Drawing.Size(75, 36);
-            this.odalaryeniToolStripMenuItem.Text = "odalaryeni";
-          //  this.odalaryeniToolStripMenuItem.Click += new System.EventHandler(this.odalaryeniToolStripMenuItem_Click);
-            */ 
+            this.odalaryeniToolStripMenuItem.Name = "odalaryeniToolStripMenuItem";
+            this.odalaryeniToolStripMenuItem.Size = new System.Drawing.Size(12, 36);
             // 
             // anasayfa
             // 
@@ -141,6 +138,8 @@
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuler;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "anasayfa";
             this.Text = "Otel Otomasyon Version1.0";
             this.Load += new System.EventHandler(this.anasayfa_Load);

@@ -19,32 +19,53 @@ namespace otel_otomasyon
         }
         
         public void yenimusterikaydi()
-        {
-            baglantiayarlari.baglan();
-         try
-            {
-
-                
+       {
+       
+         
+       
+                                  
 
                 if(baglantiayarlari.bagla.State==ConnectionState.Closed)
+                         baglantiayarlari.baglan();                
+              try
+            {      
+          
 
-               baglantiayarlari.baglan();
+                  SqlCommand musterikomut = new SqlCommand("INSERT INTO musteriler (TCKimlik,Ad,Soyad,Telefon,Cinsiyet,Medenihal) values (@TCKimlik,@Ad,@Soyad,@Telefon,@Cinsiyet,@Medenihal)", baglantiayarlari.bagla);
 
-                // Bağlantımızı kontrol ediyoruz, eğer kapalıysa açıyoruz.
-                string kayit = "insert into musteriler(tcno,isim,soyisim,telefon,adres) values (@tcno,@isim,@soyisim,@telefon,@adres)";
-                // müşteriler tablomuzun ilgili alanlarına kayıt ekleme işlemini gerçekleştirecek sorgumuz.
-                SqlCommand komut = new SqlCommand(kayit, baglantiayarlari.baglan);
-                //Sorgumuzu ve baglantimizi parametre olarak alan bir SqlCommand nesnesi oluşturuyoruz.
-                komut.Parameters.AddWithValue("@tcno", txtTc.Text);
-                komut.Parameters.AddWithValue("@isim", txtIsim.Text);
-                komut.Parameters.AddWithValue("@soyisim", txtSoyisim.Text);
-                komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
-                komut.Parameters.AddWithValue("@adres", txtAdres.Text);
-                //Parametrelerimize Form üzerinde ki kontrollerden girilen verileri aktarıyoruz.
-                komut.ExecuteNonQuery();
-                //Veritabanında değişiklik yapacak komut işlemi bu satırda gerçekleşiyor.
-                baglantiayarlari.baglanma();
-                MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti.");
+                    musterikomut.Parameters.AddWithValue("@tcno", tckimliknokutu.Text);
+                    musterikomut.Parameters.AddWithValue("@ad", adkutu.Text);
+                    musterikomut.Parameters.AddWithValue("@soyad", soyadkutu.Text);
+                    musterikomut.Parameters.AddWithValue("@telefon", telefonnokutu.Text);
+                    musterikomut.Parameters.AddWithValue("@cinsiyet", cinsiyetkutu.Text);
+                    musterikomut.Parameters.AddWithValue("@medenihal", medenihal.Text);
+
+                  
+                  
+                
+                 SqlCommand odakomut = new SqlCommand("INSERT INTO PuanDurumu (isim,limit,durum) values (@isim,@limit,@durum)", baglantiayarlari.bagla);
+             
+               /*   odakomut.Parameters.AddWithValue("@tcno", txtTc.Text);
+                  odakomut.Parameters.AddWithValue("@tcno", txtTc.Text);
+                  odakomut.Parameters.AddWithValue("@tcno", txtTc.Text);
+                  odakomut.Parameters.AddWithValue("@tcno", txtTc.Text);
+              
+                
+                  SqlCommand odadurumkomut = new SqlCommand("INSERT INTO PuanDurumu (GirisTarihi,CikisTarihi,Durum) values (@giristarihi,@cikistarihi,@durum)", baglantiayarlari.bagla);
+                  
+                  odadurumkomut.Parameters.AddWithValue("@tcno", txtTc.Text);
+                  odadurumkomut.Parameters.AddWithValue("@tcno", txtTc.Text);
+                  odadurumkomut.Parameters.AddWithValue("@tcno", txtTc.Text);
+                  odadurumkomut.Parameters.AddWithValue("@tcno", txtTc.Text);
+                
+            
+                   musterikomut.ExecuteNonQuery(); 
+                   odakomut.ExecuteNonQuery(); 
+                   odadurumkomut.ExecuteNonQuery(); */
+              
+                  baglantiayarlari.baglanma();
+               
+                  MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti.");
             }
             catch (Exception hata)
             {

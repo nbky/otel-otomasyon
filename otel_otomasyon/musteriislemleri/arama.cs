@@ -36,7 +36,7 @@ namespace otel_otomasyon
 
                string aramakutu = hizliarama.Text.ToString();
                 
-                SqlCommand komut = new SqlCommand("SELECT TOP 10 Row_number() over()m.TCKimlik,(m.Ad+' '+m.Soyad) as [Ad Soyad],h.GirisTarihi,h.CikisTarihi,o.isim,m.Telefon from musteriler as m left join hangiodadakimvar as h on m.ID=h.MusteriID left join odalar as o on o.ID=h.OdaID where m.TCKimlik='"+aramakutu+"'",baglantiayarlari.bagla);
+                SqlCommand komut = new SqlCommand("SELECT TOP 10 m.TCKimlik,(m.Ad+' '+m.Soyad) as [Ad Soyad],h.GirisTarihi,h.CikisTarihi,o.isim,m.Telefon from musteriler as m left join hangiodadakimvar as h on m.ID=h.MusteriID left join odalar as o on o.ID=h.OdaID where m.TCKimlik='"+aramakutu+"'",baglantiayarlari.bagla);
 
                 SqlDataAdapter tablo = new SqlDataAdapter(komut);
 
