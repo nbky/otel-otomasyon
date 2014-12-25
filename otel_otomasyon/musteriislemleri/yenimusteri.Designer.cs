@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(yenimusteri));
             this.msuterikayitpanel = new System.Windows.Forms.Panel();
+            this.odaturukutu = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.soyadkutu = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.yenimusteritemizle = new System.Windows.Forms.Button();
+            this.yenimusterikayit = new System.Windows.Forms.Button();
             this.kacaksurekutu = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -60,10 +62,12 @@
             // 
             // msuterikayitpanel
             // 
+            this.msuterikayitpanel.Controls.Add(this.odaturukutu);
+            this.msuterikayitpanel.Controls.Add(this.label7);
             this.msuterikayitpanel.Controls.Add(this.label13);
             this.msuterikayitpanel.Controls.Add(this.soyadkutu);
-            this.msuterikayitpanel.Controls.Add(this.button2);
-            this.msuterikayitpanel.Controls.Add(this.button1);
+            this.msuterikayitpanel.Controls.Add(this.yenimusteritemizle);
+            this.msuterikayitpanel.Controls.Add(this.yenimusterikayit);
             this.msuterikayitpanel.Controls.Add(this.kacaksurekutu);
             this.msuterikayitpanel.Controls.Add(this.label12);
             this.msuterikayitpanel.Controls.Add(this.label11);
@@ -90,6 +94,28 @@
             this.msuterikayitpanel.Size = new System.Drawing.Size(960, 471);
             this.msuterikayitpanel.TabIndex = 0;
             // 
+            // odaturukutu
+            // 
+            this.odaturukutu.FormattingEnabled = true;
+            this.odaturukutu.Items.AddRange(new object[] {
+            "2 Kişilir Odalar",
+            "3 Kişilik Odalar"});
+            this.odaturukutu.Location = new System.Drawing.Point(684, 134);
+            this.odaturukutu.Name = "odaturukutu";
+            this.odaturukutu.Size = new System.Drawing.Size(182, 22);
+            this.odaturukutu.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(571, 139);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 15);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Oda Türü :";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -108,41 +134,42 @@
             this.soyadkutu.Size = new System.Drawing.Size(182, 20);
             this.soyadkutu.TabIndex = 3;
             // 
-            // button2
+            // yenimusteritemizle
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(746, 328);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 41);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Temizle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.yenimusteritemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.yenimusteritemizle.Location = new System.Drawing.Point(747, 340);
+            this.yenimusteritemizle.Name = "yenimusteritemizle";
+            this.yenimusteritemizle.Size = new System.Drawing.Size(101, 41);
+            this.yenimusteritemizle.TabIndex = 14;
+            this.yenimusteritemizle.Text = "Temizle";
+            this.yenimusteritemizle.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // yenimusterikayit
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(636, 328);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 41);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Kayıt";
-            this.button1.UseVisualStyleBackColor = true;
+            this.yenimusterikayit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.yenimusterikayit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.yenimusterikayit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.yenimusterikayit.Location = new System.Drawing.Point(637, 340);
+            this.yenimusterikayit.Name = "yenimusterikayit";
+            this.yenimusterikayit.Size = new System.Drawing.Size(101, 41);
+            this.yenimusterikayit.TabIndex = 13;
+            this.yenimusterikayit.Text = "Kayıt";
+            this.yenimusterikayit.UseVisualStyleBackColor = true;
+            this.yenimusterikayit.Click += new System.EventHandler(this.yenimusterikayit_Click);
             // 
             // kacaksurekutu
             // 
-            this.kacaksurekutu.Location = new System.Drawing.Point(683, 219);
+            this.kacaksurekutu.Location = new System.Drawing.Point(684, 249);
             this.kacaksurekutu.Name = "kacaksurekutu";
             this.kacaksurekutu.Size = new System.Drawing.Size(182, 20);
-            this.kacaksurekutu.TabIndex = 10;
+            this.kacaksurekutu.TabIndex = 11;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(570, 222);
+            this.label12.Location = new System.Drawing.Point(571, 252);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(84, 15);
             this.label12.TabIndex = 26;
@@ -153,7 +180,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(570, 263);
+            this.label11.Location = new System.Drawing.Point(571, 293);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 15);
             this.label11.TabIndex = 24;
@@ -161,17 +188,17 @@
             // 
             // cikistarihikutu
             // 
-            this.cikistarihikutu.Location = new System.Drawing.Point(683, 263);
+            this.cikistarihikutu.Location = new System.Drawing.Point(684, 293);
             this.cikistarihikutu.Name = "cikistarihikutu";
             this.cikistarihikutu.Size = new System.Drawing.Size(182, 20);
-            this.cikistarihikutu.TabIndex = 11;
+            this.cikistarihikutu.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(570, 181);
+            this.label6.Location = new System.Drawing.Point(571, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 15);
             this.label6.TabIndex = 22;
@@ -179,10 +206,10 @@
             // 
             // giristarihikutu
             // 
-            this.giristarihikutu.Location = new System.Drawing.Point(683, 177);
+            this.giristarihikutu.Location = new System.Drawing.Point(684, 211);
             this.giristarihikutu.Name = "giristarihikutu";
             this.giristarihikutu.Size = new System.Drawing.Size(182, 20);
-            this.giristarihikutu.TabIndex = 9;
+            this.giristarihikutu.TabIndex = 10;
             // 
             // cinsiyetkutu
             // 
@@ -240,17 +267,17 @@
             "313",
             "314",
             "315"});
-            this.odanokutu.Location = new System.Drawing.Point(683, 135);
+            this.odanokutu.Location = new System.Drawing.Point(684, 170);
             this.odanokutu.Name = "odanokutu";
             this.odanokutu.Size = new System.Drawing.Size(182, 22);
-            this.odanokutu.TabIndex = 8;
+            this.odanokutu.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(570, 137);
+            this.label10.Location = new System.Drawing.Point(571, 172);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 15);
             this.label10.TabIndex = 17;
@@ -413,10 +440,12 @@
         private System.Windows.Forms.ComboBox cinsiyetkutu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox kacaksurekutu;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button yenimusteritemizle;
+        private System.Windows.Forms.Button yenimusterikayit;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox soyadkutu;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox odaturukutu;
 
     }
 }

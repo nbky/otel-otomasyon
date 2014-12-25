@@ -13,78 +13,76 @@ namespace otel_otomasyon
 {
     public partial class yenimusteri : Form
     {
+        string  gtarih, ctarih;
+        
         public yenimusteri()
         {
             InitializeComponent();
         }
+  
         
         public void yenimusterikaydi()
-       {
-       
-         
-       
-                                  
-
-                if(baglantiayarlari.bagla.State==ConnectionState.Closed)
-                         baglantiayarlari.baglan();                
-              try
+       {                   
+               try
             {      
-          
-
+           baglantiayarlari.baglan();    
+                  gtarih=giristarihikutu.Value.ToShortDateString();
+                  ctarih=cikistarihikutu.Value.ToShortDateString();
+                  
                   SqlCommand musterikomut = new SqlCommand("INSERT INTO musteriler (TCKimlik,Ad,Soyad,Telefon,Cinsiyet,Medenihal) values (@TCKimlik,@Ad,@Soyad,@Telefon,@Cinsiyet,@Medenihal)", baglantiayarlari.bagla);
 
-                    musterikomut.Parameters.AddWithValue("@tcno", tckimliknokutu.Text);
-                    musterikomut.Parameters.AddWithValue("@ad", adkutu.Text);
-                    musterikomut.Parameters.AddWithValue("@soyad", soyadkutu.Text);
-                    musterikomut.Parameters.AddWithValue("@telefon", telefonnokutu.Text);
-                    musterikomut.Parameters.AddWithValue("@cinsiyet", cinsiyetkutu.Text);
-                    musterikomut.Parameters.AddWithValue("@medenihal", medenihal.Text);
+                    musterikomut.Parameters.AddWithValue("@TCKimlik", tckimliknokutu.Text);
+                    musterikomut.Parameters.AddWithValue("@Ad", adkutu.Text);
+                    musterikomut.Parameters.AddWithValue("@Soyad", soyadkutu.Text);
+                    musterikomut.Parameters.AddWithValue("@Telefon", telefonnokutu.Text);
+                    musterikomut.Parameters.AddWithValue("@Cinsiyet", cinsiyetkutu.Text);
+                    musterikomut.Parameters.AddWithValue("@Medenihal", medenihal.Text);
+                  
+                 SqlCommand odakomut = new SqlCommand("INSERT INTO PuanDurumu (isim,limit,) values (@isim,@limit,)", baglantiayarlari.bagla);
+             
+                  odakomut.Parameters.AddWithValue("@isim", odanokutu.Text);
+                  odakomut.Parameters.AddWithValue("@limit", odaturukutu.Text);
+           
+              
+             
+                  SqlCommand odadurumkomut = new SqlCommand("INSERT INTO PuanDurumu (GirisTarihi,CikisTarihi,) values (@giristarihi,@cikistarihi)", baglantiayarlari.bagla);
+
+                  odadurumkomut.Parameters.AddWithValue("@giristarihi", gtarih);
+                  odadurumkomut.Parameters.AddWithValue("@cikistarihi", ctarih);
 
                   
-                  
-                
-                 SqlCommand odakomut = new SqlCommand("INSERT INTO PuanDurumu (isim,limit,durum) values (@isim,@limit,@durum)", baglantiayarlari.bagla);
-             
-               /*   odakomut.Parameters.AddWithValue("@tcno", txtTc.Text);
-                  odakomut.Parameters.AddWithValue("@tcno", txtTc.Text);
-                  odakomut.Parameters.AddWithValue("@tcno", txtTc.Text);
-                  odakomut.Parameters.AddWithValue("@tcno", txtTc.Text);
-              
-                
-                  SqlCommand odadurumkomut = new SqlCommand("INSERT INTO PuanDurumu (GirisTarihi,CikisTarihi,Durum) values (@giristarihi,@cikistarihi,@durum)", baglantiayarlari.bagla);
-                  
-                  odadurumkomut.Parameters.AddWithValue("@tcno", txtTc.Text);
-                  odadurumkomut.Parameters.AddWithValue("@tcno", txtTc.Text);
-                  odadurumkomut.Parameters.AddWithValue("@tcno", txtTc.Text);
-                  odadurumkomut.Parameters.AddWithValue("@tcno", txtTc.Text);
-                
             
                    musterikomut.ExecuteNonQuery(); 
-                   odakomut.ExecuteNonQuery(); 
-                   odadurumkomut.ExecuteNonQuery(); */
+                   odakomut.ExecuteNonQuery();
+                   odadurumkomut.ExecuteNonQuery();
               
                   baglantiayarlari.baglanma();
                
                   MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti.");
             }
-            catch (Exception hata)
-            {
-                MessageBox.Show("İşlem Sırasında Hata Oluştu." + hata.Message);
-            }
+              catch (Exception hata)
+              {
+                  MessageBox.Show("İşlem Sırasında Hata Oluştu." + hata.Message);
+              }
  
+           
+
+                  
+           
         }
-                 
- 
-       
-
-
-        
+                    
 
         private void yenimusteri_Load(object sender, EventArgs e)
         {
-         
+
 
         }
-        
+
+        private void yenimusterikayit_Click(object sender, EventArgs e)
+        {
+            yenimusterikaydi();
+        }
+
+       
     }
 }
