@@ -38,9 +38,10 @@
             // 
             // girisbutonu
             // 
-            this.girisbutonu.Location = new System.Drawing.Point(33, 129);
+            this.girisbutonu.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.girisbutonu.Location = new System.Drawing.Point(105, 129);
             this.girisbutonu.Name = "girisbutonu";
-            this.girisbutonu.Size = new System.Drawing.Size(172, 40);
+            this.girisbutonu.Size = new System.Drawing.Size(100, 40);
             this.girisbutonu.TabIndex = 0;
             this.girisbutonu.Text = "Giriş";
             this.girisbutonu.UseVisualStyleBackColor = true;
@@ -83,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(238, 230);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);

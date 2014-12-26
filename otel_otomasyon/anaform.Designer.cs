@@ -42,6 +42,7 @@
             // 
             // menuler
             // 
+            this.menuler.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.menuler.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menuler.ImageScalingSize = new System.Drawing.Size(16, 32);
             this.menuler.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -133,7 +134,6 @@
             this.Controls.Add(this.menuler);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.KeyPreview = true;

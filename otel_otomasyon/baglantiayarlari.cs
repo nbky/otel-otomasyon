@@ -24,6 +24,7 @@ namespace otel_otomasyon
                 bagla.Open();
             }
         }
+       
         public static void baglanma()
         {
             bagla.Close();

@@ -17,7 +17,11 @@ namespace otel_otomasyon
         {
             InitializeComponent();
         }
-    
+        public void kututemizle() {
+            
+            hizliaramakutu.Clear();
+
+        }
         public void MusteriArama()
         {
             DataTable veriler = new DataTable();
@@ -29,12 +33,14 @@ namespace otel_otomasyon
             musteribilgileri.Columns.Add("Çıkış Tarihi",100,HorizontalAlignment.Left);
             musteribilgileri.Columns.Add("Oda Numarası", 100, HorizontalAlignment.Center);
             musteribilgileri.Columns.Add("Telefon Numarası",100, HorizontalAlignment.Center);
-                try
            
-                {
-                   baglantiayarlari.baglan();
+        try
+           
+              {
 
-               string aramakutu = hizliarama.Text.ToString();
+               baglantiayarlari.baglan();
+
+               string aramakutu = hizliaramakutu.Text.ToString();
                 
                 SqlCommand komut = new SqlCommand("SELECT TOP 10 m.TCKimlik,(m.Ad+' '+m.Soyad) as [Ad Soyad],h.GirisTarihi,h.CikisTarihi,o.isim,m.Telefon from musteriler as m left join hangiodadakimvar as h on m.ID=h.MusteriID left join odalar as o on o.ID=h.OdaID where m.TCKimlik='"+aramakutu+"'",baglantiayarlari.bagla);
 
@@ -75,7 +81,16 @@ namespace otel_otomasyon
             MusteriArama();
         }
 
+        private void hizliaramakutu_MouseDown(object sender, MouseEventArgs e)
+        {
+            kututemizle();
         }
+
+        private void aramakategori_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gelismisaramakutu.Focus();
+        }
+    }
       
     }
 

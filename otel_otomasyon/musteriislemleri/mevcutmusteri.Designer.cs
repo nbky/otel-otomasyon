@@ -87,7 +87,6 @@
             // 
             // musteribilgiarama
             // 
-            this.musteribilgiarama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.musteribilgiarama.Location = new System.Drawing.Point(389, 455);
             this.musteribilgiarama.Name = "musteribilgiarama";
             this.musteribilgiarama.Size = new System.Drawing.Size(90, 29);
@@ -97,7 +96,6 @@
             // 
             // musteribilgiyazdir
             // 
-            this.musteribilgiyazdir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.musteribilgiyazdir.Location = new System.Drawing.Point(487, 455);
             this.musteribilgiyazdir.Name = "musteribilgiyazdir";
             this.musteribilgiyazdir.Size = new System.Drawing.Size(90, 29);
@@ -109,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(984, 496);
             this.Controls.Add(this.musteribilgiyazdir);
             this.Controls.Add(this.musteribilgiarama);
