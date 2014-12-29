@@ -103,6 +103,7 @@
             this.hizliaramakutu.Size = new System.Drawing.Size(184, 20);
             this.hizliaramakutu.TabIndex = 5;
             this.hizliaramakutu.Text = "T.C. Kimlik Numarası Giriniz";
+         
             this.hizliaramakutu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.hizliaramakutu_MouseDown);
             // 
             // button1

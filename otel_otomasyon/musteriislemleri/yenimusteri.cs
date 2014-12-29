@@ -48,6 +48,28 @@ namespace otel_otomasyon
 
         }
 
+        public void mevcutmusteritckontrolu()
+        {
+            if (tckimliknokutu.TextLength == 11)
+            {                                     
+                baglantiayarlari.baglan();
+
+                SqlCommand komut = new SqlCommand("SELECT * from musteriler  where TCKimlik='" + tckimliknokutu.Text.ToString() + "'", baglantiayarlari.bagla);             
+                
+                SqlDataReader oku = komut.ExecuteReader();
+              
+                if (oku.Read())
+                {
+                    adkutu.Text = oku["Ad"].ToString();
+                    soyadkutu.Text = oku["Soyad"].ToString();
+                    telefonnokutu.Text = oku["Telefon"].ToString();
+                    medenihal.Text = oku["Medenihal"].ToString();
+                    cinsiyetkutu.Text = oku["Cinsiyet"].ToString();
+                }
+                baglantiayarlari.baglanma();
+            }
+        }
+
         public void yenimusterikaydi()
         {
             try
@@ -118,6 +140,11 @@ namespace otel_otomasyon
         private void kalacaksurekutu_TextChanged(object sender, EventArgs e)
         {
             kalacakgun();
+        }
+
+        private void tckimliknokutu_TextChanged(object sender, EventArgs e)
+        {
+            mevcutmusteritckontrolu();
         }
     }
 }

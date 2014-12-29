@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(yenimusteri));
             this.musterikayitpanel = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.odaturukutu = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tckimliknokutu = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.musterikayitpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +95,17 @@
             this.musterikayitpanel.Name = "musterikayitpanel";
             this.musterikayitpanel.Size = new System.Drawing.Size(960, 471);
             this.musterikayitpanel.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.Location = new System.Drawing.Point(777, 131);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(62, 15);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "Kişilik Oda";
             // 
             // odaturukutu
             // 
@@ -396,17 +407,7 @@
             this.tckimliknokutu.Name = "tckimliknokutu";
             this.tckimliknokutu.Size = new System.Drawing.Size(182, 20);
             this.tckimliknokutu.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.Location = new System.Drawing.Point(777, 131);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 15);
-            this.label14.TabIndex = 37;
-            this.label14.Text = "Kişilik Oda";
+            this.tckimliknokutu.TextChanged += new System.EventHandler(this.tckimliknokutu_TextChanged);
             // 
             // yenimusteri
             // 

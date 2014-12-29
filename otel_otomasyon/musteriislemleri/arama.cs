@@ -13,6 +13,8 @@ namespace otel_otomasyon
 {
     public partial class aramaislmleriformu : Form
     {
+        string aramakutu;
+
         public aramaislmleriformu()
         {
             InitializeComponent();
@@ -40,7 +42,7 @@ namespace otel_otomasyon
 
                baglantiayarlari.baglan();
 
-               string aramakutu = hizliaramakutu.Text.ToString();
+                aramakutu = hizliaramakutu.Text.ToString();
                 
                 SqlCommand komut = new SqlCommand("SELECT TOP 10 m.TCKimlik,(m.Ad+' '+m.Soyad) as [Ad Soyad],h.GirisTarihi,h.CikisTarihi,o.isim,m.Telefon from musteriler as m left join hangiodadakimvar as h on m.ID=h.MusteriID left join odalar as o on o.ID=h.OdaID where m.TCKimlik='"+aramakutu+"'",baglantiayarlari.bagla);
 
@@ -90,6 +92,8 @@ namespace otel_otomasyon
         {
             gelismisaramakutu.Focus();
         }
+
+       
     }
       
     }
