@@ -37,9 +37,9 @@
             this.telefon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.hizliaramakutu = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.mevcutmusteriyihizliaramabutonu = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.mevcutmusteriyigelismisaramabutonu = new System.Windows.Forms.Button();
             this.gelismisaramakutu = new System.Windows.Forms.TextBox();
             this.aramakategori = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
@@ -88,7 +88,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.hizliaramakutu);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.mevcutmusteriyihizliaramabutonu);
             this.groupBox1.Location = new System.Drawing.Point(93, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(277, 70);
@@ -99,26 +99,27 @@
             // hizliaramakutu
             // 
             this.hizliaramakutu.Location = new System.Drawing.Point(6, 33);
+            this.hizliaramakutu.MaxLength = 11;
             this.hizliaramakutu.Name = "hizliaramakutu";
             this.hizliaramakutu.Size = new System.Drawing.Size(184, 20);
             this.hizliaramakutu.TabIndex = 5;
             this.hizliaramakutu.Text = "T.C. Kimlik Numarası Giriniz";
-         
+            this.hizliaramakutu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.hizliaramakutu_KeyDown);
             this.hizliaramakutu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.hizliaramakutu_MouseDown);
             // 
-            // button1
+            // mevcutmusteriyihizliaramabutonu
             // 
-            this.button1.Location = new System.Drawing.Point(196, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Ara";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.mevcutmusteriyihizliaramabutonu.Location = new System.Drawing.Point(196, 29);
+            this.mevcutmusteriyihizliaramabutonu.Name = "mevcutmusteriyihizliaramabutonu";
+            this.mevcutmusteriyihizliaramabutonu.Size = new System.Drawing.Size(75, 25);
+            this.mevcutmusteriyihizliaramabutonu.TabIndex = 4;
+            this.mevcutmusteriyihizliaramabutonu.Text = "Ara";
+            this.mevcutmusteriyihizliaramabutonu.UseVisualStyleBackColor = true;
+            this.mevcutmusteriyihizliaramabutonu.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.mevcutmusteriyigelismisaramabutonu);
             this.groupBox2.Controls.Add(this.gelismisaramakutu);
             this.groupBox2.Controls.Add(this.aramakategori);
             this.groupBox2.Location = new System.Drawing.Point(540, 13);
@@ -128,14 +129,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gelişmiş Arama";
             // 
-            // button2
+            // mevcutmusteriyigelismisaramabutonu
             // 
-            this.button2.Location = new System.Drawing.Point(259, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 25);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Ara";
-            this.button2.UseVisualStyleBackColor = true;
+            this.mevcutmusteriyigelismisaramabutonu.Location = new System.Drawing.Point(259, 28);
+            this.mevcutmusteriyigelismisaramabutonu.Name = "mevcutmusteriyigelismisaramabutonu";
+            this.mevcutmusteriyigelismisaramabutonu.Size = new System.Drawing.Size(75, 25);
+            this.mevcutmusteriyigelismisaramabutonu.TabIndex = 8;
+            this.mevcutmusteriyigelismisaramabutonu.Text = "Ara";
+            this.mevcutmusteriyigelismisaramabutonu.UseVisualStyleBackColor = true;
             // 
             // gelismisaramakutu
             // 
@@ -187,9 +188,9 @@
         private System.Windows.Forms.ListView musteribilgileri;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox hizliaramakutu;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button mevcutmusteriyihizliaramabutonu;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button mevcutmusteriyigelismisaramabutonu;
         private System.Windows.Forms.TextBox gelismisaramakutu;
         private System.Windows.Forms.ComboBox aramakategori;
         private System.Windows.Forms.ColumnHeader tcno;

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace otel_otomasyon
 {
     public partial class aramaislmleriformu : Form
@@ -24,6 +25,7 @@ namespace otel_otomasyon
             hizliaramakutu.Clear();
 
         }
+     
         public void MusteriArama()
         {
             DataTable veriler = new DataTable();
@@ -93,7 +95,16 @@ namespace otel_otomasyon
             gelismisaramakutu.Focus();
         }
 
-       
+        private void hizliaramakutu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                MusteriArama();
+            }
+        }
+
+      
+                     
     }
       
     }

@@ -15,20 +15,34 @@ namespace otel_otomasyon
 
     public partial class yenimusteri : Form
     {
-        string gtarih, ctarih; int sonmusteriid, sonodaid;
+        string gtarih, ctarih,odaturu; int sonmusteriid, sonodaid;
+        bool kontrol= false;
+        String[] ikikisilikodalar = new string[42];
+        String[] uckisilikodalar = new string[42];
 
         public yenimusteri()
         {
-
             InitializeComponent();
-
         }
 
+        public void odanumaralari() {
+
+         //s   odanokutu.Items.Add("Eklenecek Veri");
+        }
+            
         public void kalacakgun()
         {
-            TimeSpan tarih = new TimeSpan(int.Parse(kalacaksurekutu.Text), 0, 0, 0);
-            DateTime yeni = giristarihikutu.Value + tarih;
-            cikistarihikutu.Value = yeni;
+
+            if (kalacaksurekutu.Text.Length > 0)
+            {
+                TimeSpan tarih = new TimeSpan(int.Parse(kalacaksurekutu.Text), 0, 0, 0);
+                DateTime yeni = giristarihikutu.Value + tarih;
+                cikistarihikutu.Value = yeni;
+            }
+
+                
+            
+            
         }
 
         public void panelitemizle()
@@ -44,8 +58,7 @@ namespace otel_otomasyon
             cikistarihikutu.ResetText();
             kalacaksurekutu.ResetText();
             odaturukutu.ResetText();
-            kalacaksurekutu.ResetText();
-
+         
         }
 
         public void mevcutmusteritckontrolu()
@@ -60,14 +73,52 @@ namespace otel_otomasyon
               
                 if (oku.Read())
                 {
+                    kontrol = true;
+                    sonmusteriid = Convert.ToInt32(oku["ID"]);
                     adkutu.Text = oku["Ad"].ToString();
                     soyadkutu.Text = oku["Soyad"].ToString();
                     telefonnokutu.Text = oku["Telefon"].ToString();
                     medenihal.Text = oku["Medenihal"].ToString();
                     cinsiyetkutu.Text = oku["Cinsiyet"].ToString();
                 }
+                else
+                {
+                    kontrol = false;
+                }
                 baglantiayarlari.baglanma();
             }
+        }
+        public void dahaoncevarolanmusteriekleme(int sonmusteriid)
+        {
+            try
+            {
+                baglantiayarlari.baglan();
+
+                gtarih = giristarihikutu.Value.ToString("yyyy-MM-dd");
+                ctarih = cikistarihikutu.Value.ToString("yyyy-MM-dd");
+
+                SqlCommand odakomut = new SqlCommand("INSERT INTO odalar (isim,limit) values (@isim,@limit) select scope_identity()", baglantiayarlari.bagla);
+                odakomut.Parameters.AddWithValue("@isim", odanokutu.Text);
+                odakomut.Parameters.AddWithValue("@limit", odaturukutu.Text);
+                sonodaid = Convert.ToInt32(odakomut.ExecuteScalar());
+
+                SqlCommand odadurumkomut = new SqlCommand("INSERT INTO hangiodadakimvar (OdaID, MusteriID, GirisTarihi,CikisTarihi) values (@odaid, @musteriid, @giristarihi,@cikistarihi)", baglantiayarlari.bagla);
+                odadurumkomut.Parameters.AddWithValue("@odaid", sonodaid);
+                odadurumkomut.Parameters.AddWithValue("@musteriid", sonmusteriid);
+                odadurumkomut.Parameters.AddWithValue("@giristarihi", gtarih);
+                odadurumkomut.Parameters.AddWithValue("@cikistarihi", ctarih);
+
+                odadurumkomut.ExecuteNonQuery();
+
+                baglantiayarlari.baglanma();
+                MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti.");
+            }
+            catch (SqlException hata)
+            {
+                MessageBox.Show(hata.Message);
+            }
+
+                
         }
 
         public void yenimusterikaydi()
@@ -89,8 +140,7 @@ namespace otel_otomasyon
 
                 sonmusteriid = Convert.ToInt32(musterikomut.ExecuteScalar());
 
-                MessageBox.Show(sonmusteriid.ToString());
-                
+            
                 
                 SqlCommand odakomut = new SqlCommand("INSERT INTO odalar (isim,limit) values (@isim,@limit) select scope_identity()", baglantiayarlari.bagla);
                 odakomut.Parameters.AddWithValue("@isim", odanokutu.Text);
@@ -107,7 +157,7 @@ namespace otel_otomasyon
                 odadurumkomut.ExecuteNonQuery();
 
                 baglantiayarlari.baglanma();
-                MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti.(" + sonmusteriid.ToString() + ")");
+                MessageBox.Show("Müşteri Kayıt İşlemi Gerçekleşti.");
                 
 
             }
@@ -134,7 +184,16 @@ namespace otel_otomasyon
 
         private void kayitbutonu_Click(object sender, EventArgs e)
         {
-            yenimusterikaydi();
+            if (kontrol==false)
+            {
+                yenimusterikaydi();
+                panelitemizle();
+            }
+            else
+            {
+                dahaoncevarolanmusteriekleme(sonmusteriid);
+                panelitemizle();
+            }
         }
 
         private void kalacaksurekutu_TextChanged(object sender, EventArgs e)
@@ -146,5 +205,20 @@ namespace otel_otomasyon
         {
             mevcutmusteritckontrolu();
         }
+
+        private void odaturukutu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            odaturu=odaturukutu.Text.ToString();
+           
+            if (odaturu=="2")
+            {
+
+            }
+            else if (odaturu=="3")
+            {
+                
+            }
+        }
+               
     }
 }

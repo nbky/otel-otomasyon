@@ -124,13 +124,14 @@ namespace otel_otomasyon
                     }
                 }
 
-              /*  private void odalaryeniToolStripMenuItem_Click(object sender, EventArgs e)
+                private void anasayfa_FormClosed(object sender, FormClosedEventArgs e)
                 {
-                    yeniodalar = new odalaryeni();
-                    yeniodalar.Show();
-                    yeniodalar.MdiParent = this;
-                }*/
-             
+                    if (MessageBox.Show("Çıkış Yapacaksınız Eminmisiniz?", "Çıkış İşlemi", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
+                    {
+                        Application.Exit();
+                    }
+                }
+                     
         }
              
     }
