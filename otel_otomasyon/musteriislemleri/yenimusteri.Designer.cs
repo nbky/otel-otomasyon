@@ -108,6 +108,7 @@
             this.guncellebutonu.TabIndex = 39;
             this.guncellebutonu.Text = "Güncelle";
             this.guncellebutonu.UseVisualStyleBackColor = true;
+            this.guncellebutonu.Click += new System.EventHandler(this.guncellebutonu_Click);
             // 
             // eklenenkisilerebak
             // 
@@ -346,7 +347,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.Location = new System.Drawing.Point(637, 73);
             this.label8.Name = "label8";
@@ -415,7 +416,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(124, 73);
             this.label1.Name = "label1";

@@ -25,6 +25,58 @@ namespace otel_otomasyon
             InitializeComponent();
         }
 
+        public void listelemeişlemi()
+        {
+            {
+                DataTable veriler = new DataTable();
+                eklenenkisilerebak.View = View.Details;
+                eklenenkisilerebak.Columns.Clear();
+                eklenenkisilerebak.Columns.Add("T.C. Kimlik Numarası", 150, HorizontalAlignment.Center);
+                eklenenkisilerebak.Columns.Add("Adı Soyadı", 100, HorizontalAlignment.Center);
+                eklenenkisilerebak.Columns.Add("Giriş Tarihi", 100, HorizontalAlignment.Left);
+                eklenenkisilerebak.Columns.Add("Çıkış Tarihi", 100, HorizontalAlignment.Left);
+                eklenenkisilerebak.Columns.Add("Oda Numarası", 100, HorizontalAlignment.Center);
+                eklenenkisilerebak.Columns.Add("Telefon Numarası", 100, HorizontalAlignment.Center);
+
+                try
+                {
+
+                    baglantiayarlari.baglan();
+
+                    SqlCommand komut = new SqlCommand("SELECT TOP 10 m.TCKimlik,(m.Ad+' '+m.Soyad) as [Ad Soyad],h.GirisTarihi,h.CikisTarihi,o.isim,m.Telefon from musteriler as m left join hangiodadakimvar as h on m.ID=h.MusteriID left join odalar as o on o.ID=h.OdaID where m.TCKimlik='" + tckimliknokutu.Text.ToString() + "'", baglantiayarlari.bagla);
+
+                    SqlDataAdapter tablo = new SqlDataAdapter(komut);
+
+                    tablo.Fill(veriler);
+
+                    eklenenkisilerebak.Items.Clear();
+
+                    for (int i = 0; i < veriler.Rows.Count; i++)
+                    {
+                        DataRow satir = veriler.Rows[i];
+
+                        if (satir.RowState != DataRowState.Deleted)
+                        {
+                            ListViewItem item = new ListViewItem(satir["TCKimlik"].ToString());
+                            item.SubItems.Add(satir["Ad Soyad"].ToString());
+                            item.SubItems.Add(satir["GirisTarihi"].ToString());
+                            item.SubItems.Add(satir["GirisTarihi"].ToString());
+                            item.SubItems.Add(satir["isim"].ToString());
+                            item.SubItems.Add(satir["Telefon"].ToString());
+                            eklenenkisilerebak.Items.Add(item);
+                        }
+                    }
+
+                    baglantiayarlari.baglanma();
+
+                }
+                catch (SqlException hata)
+                {
+                    MessageBox.Show(hata.Message);
+                }
+
+            }
+        }
         public void odanumaralari() {
 
          //s   odanokutu.Items.Add("Eklenecek Veri");
@@ -67,7 +119,7 @@ namespace otel_otomasyon
             {                                     
                 baglantiayarlari.baglan();
 
-                SqlCommand komut = new SqlCommand("SELECT * from musteriler  where TCKimlik='" + tckimliknokutu.Text.ToString() + "'", baglantiayarlari.bagla);             
+                SqlCommand komut = new SqlCommand("SELECT TOP 10 isim from odalar where isim='" + odanokutu.Text.ToString() + "'", baglantiayarlari.bagla);             
                 
                 SqlDataReader oku = komut.ExecuteReader();
               
@@ -187,6 +239,7 @@ namespace otel_otomasyon
             if (kontrol==false)
             {
                 yenimusterikaydi();
+                listelemeişlemi();
                 panelitemizle();
             }
             else
@@ -218,6 +271,11 @@ namespace otel_otomasyon
             {
                 
             }
+        }
+
+        private void guncellebutonu_Click(object sender, EventArgs e)
+        {
+            listelemeişlemi();
         }
                
     }
